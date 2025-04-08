@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pbl2ia_undb"
+version = "0.0.1"
+description = "Projeto apresentado a disciplina de IA da UNDB para o PBL2"
+authors = [
+  { name = "Augusto Cesar" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.12"
+
+
+[tool.ruff]
+line-length = 99
+src = ["pbl2ia_undb"]
+include = ["pyproject.toml", "pbl2ia_undb/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["pbl2ia_undb"]
+force-sort-within-sections = true
+
